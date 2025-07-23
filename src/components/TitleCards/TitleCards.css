@@ -1,0 +1,48 @@
+.titlecards {
+            margin-top: 50px;
+            margin-bottom: 30px
+}
+
+.titlecards h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+}
+
+.titlecards .card-list {
+            display: flex;
+            gap: 10px;
+            overflow-x: scroll;
+            width: 90vw;
+            padding: 10px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            overflow-y: hidden;
+}
+
+.card-list img {
+            width: 240px;
+            border-radius: 4px;
+            cursor: pointer;
+}
+
+.card {
+            position: relative;
+}
+
+.titlecards .card h3 {
+            opacity: 1;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            color: white;
+            font-size: 14px;
+            width: 90%;
+}

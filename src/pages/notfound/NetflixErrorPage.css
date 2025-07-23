@@ -1,0 +1,127 @@
+/* Import a suitable font or use a system font */
+@import url('https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;700&display=swap'); /* This is a placeholder, Netflix Sans is proprietary. Using a similar open font or system font is recommended. */
+
+
+.netflix-error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes header to top, content to center, footer to bottom */
+  align-items: center; /* Centers content horizontally */
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1666586364671-f4907c79b1dd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Placeholder URL for the background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 20px; /* Add some padding around the edges */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.netflix-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Aligns logo to the left */
+  padding-top: 20px; /* Space from the top */
+  padding-left: 40px; /* Space from the left */
+}
+
+.netflix-logo {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #e50914; /* Netflix red */
+  text-decoration: none;
+  letter-spacing: -0.05em; /* Slightly tighter letter spacing */
+}
+
+.netflix-content {
+  flex-grow: 1; /* Allows content to take up available space, pushing footer down */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically within its available space */
+  align-items: center;
+  max-width: 600px; /* Limit the width of the text for readability */
+  padding: 20px;
+}
+
+.netflix-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability on busy background */
+}
+
+.netflix-content p {
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+}
+
+.netflix-home-button {
+  background-color: #e50914; /* Netflix red */
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.netflix-home-button:hover {
+  background-color: #f40612; /* Slightly brighter red on hover */
+}
+
+.netflix-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Pushes error code to left, from text to right */
+  padding: 20px 40px; /* Padding for bottom left/right */
+  font-size: 0.9em;
+  opacity: 0.8; /* Slightly less prominent */
+}
+
+.error-code {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.from-text {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .netflix-header {
+    padding-left: 20px;
+  }
+
+  .netflix-logo {
+    font-size: 1.8em;
+  }
+
+  .netflix-content h1 {
+    font-size: 2.5em;
+  }
+
+  .netflix-content p {
+    font-size: 1em;
+  }
+
+  .netflix-home-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+
+  .netflix-footer {
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: center; /* Center them when stacked */
+    padding: 20px;
+  }
+
+  .error-code,
+  .from-text {
+    margin-bottom: 10px; /* Add space between stacked footer elements */
+  }
+}

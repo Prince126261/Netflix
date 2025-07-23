@@ -1,0 +1,104 @@
+.player {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+}
+
+.player img {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+}
+
+.player iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+}
+
+.player-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+}
+
+/* Base Styles for all screen sizes */
+.player {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+}
+
+.player img {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 10;
+            /* Ensures the icon is on top of the iframe */
+}
+
+.player iframe {
+            width: 90%;
+            max-width: 1200px;
+            /* Limits the maximum width on large screens */
+            aspect-ratio: 16 / 9;
+            /* This is the key to responsive video players. It keeps the video in a 16:9 ratio. */
+            height: auto;
+            /* Let the height be determined by the aspect ratio */
+            border-radius: 10px;
+            margin-bottom: 20px;
+}
+
+.player-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            color: #fff;
+            padding: 0 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 10px;
+}
+
+/* Media Query for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+            .player img {
+                        width: 40px;
+                        height: 40px;
+                        top: 15px;
+                        left: 15px;
+            }
+
+            .player iframe {
+                        width: 95%;
+                        /* Make the iframe a little wider on mobile */
+                        border-radius: 5px;
+            }
+
+            .player-info {
+                        flex-direction: column;
+                        /* Stack the info text vertically */
+                        align-items: flex-start;
+                        width: 95%;
+                        gap: 5px;
+                        font-size: 14px;
+                        margin-top: 5px;
+            }
+}
